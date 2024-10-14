@@ -7,6 +7,9 @@ vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
 
+-- Enable mouse mode, can be useful for resizing splits for example!
+vim.opt.mouse = 'a'
+
 -- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -78,6 +81,15 @@ require('lazy').setup({
         additional_vim_regex_highlighting = { 'ruby' },
       },
       indent = { enable = true, disable = { 'ruby' } },
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          init_selection = false, -- set to `false` to disable one of the mappings
+          node_incremental = "<Tab>",
+          scope_incremental = false,
+          node_decremental = "<S-Tab>",
+        },
+      },
     },
     -- There are additional nvim-treesitter modules that you can use to interact
     -- with nvim-treesitter. You should go explore a few and see what interests you:
