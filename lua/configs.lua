@@ -10,6 +10,9 @@ end)
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
 
+-- Nerd font
+vim.g.have_nerd_font = false
+
 -- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
