@@ -1,6 +1,7 @@
 -- leader
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+vim.api.nvim_set_keymap('n', ';', ':', { noremap = true, silent = false })
 
 -- clipboard
 vim.schedule(function() 
